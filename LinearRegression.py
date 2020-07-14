@@ -5,14 +5,13 @@ def LinearRegression(X,y,theta,itera,alpha):
     r,c=X.shape
     x=[]
     z=[]
-    print(theta)
     for i in range (itera):
         x.append(i+1)
         predicted=X@theta
         grad=(1/r)*(np.transpose(X)@(predicted-y))
         theta=theta-alpha*grad
         error=(1/r)*np.transpose(predicted-y)@(predicted-y)
-        z.append(error[0][0])     
+        z.append(error[0][0])#error is a matrix     
     predicted=X@theta
     xdata=np.arange(0,4,0.01)
     plt.plot(xdata,predicted)
