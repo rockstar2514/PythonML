@@ -1,4 +1,3 @@
 Implementation of Python ML algorithms. 
-1.Linear Regression
-2.Polynomial Regression
-3.Logisitic Regression
+1.Linear Regression (can be used for Polynomial Regression too)
+2.Logisitic Regression
