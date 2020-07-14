@@ -34,3 +34,4 @@ for i in range(len(ydata)):
     y[i][0]=ydata[i]
 LinearRegression(X,y,theta,100,0.01)
 #very important to convert lists to numpy arrays
+#Our function LinearRegression() takes X->the design matrix, y->the target values, theta->initial values of theta, itera-> number of iterations, alpha-> learning rate.(all are numpy arrays)
