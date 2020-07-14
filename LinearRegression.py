@@ -19,6 +19,7 @@ def LinearRegression(X,y,theta,itera,alpha):
 xdata=np.arange(0,4,0.01)
 ydata=3.86718*xdata*xdata+1.5+0.2*np.random.randn(len(xdata))
 plt.scatter(xdata,ydata)
+plt.show()
 X=np.ones((400,3))
 for i in range(400):
     X[i][1]=xdata[i]
