@@ -8,15 +8,10 @@ def LinearRegression(X,y,theta,itera,alpha):
     print(theta)
     for i in range (itera):
         x.append(i+1)
-        print(X.shape)
-        print(theta.shape)
         predicted=X@theta
-        print(predicted.shape)
-        print(y.shape)
         grad=(1/r)*(np.transpose(X)@(predicted-y))
         theta=theta-alpha*grad
         error=(1/r)*np.transpose(predicted-y)@(predicted-y)
-        print(error.shape)
         z.append(error[0][0])     
     predicted=X@theta
     xdata=np.arange(0,4,0.01)
@@ -37,5 +32,5 @@ theta[2]=1;
 y=np.ones((len(ydata),1))
 for i in range(len(ydata)):
     y[i][0]=ydata[i]
-    
 LinearRegression(X,y,theta,100,0.01)
+#very important to convert lists to numpy arrays
