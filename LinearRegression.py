@@ -10,11 +10,11 @@ def LinearRegression(X,y,theta,itera,alpha):
         predicted=X@theta
         grad=(1/r)*(np.transpose(X)@(predicted-y))
         theta=theta-alpha*grad
-        error=(1/r)*np.transpose(predicted-y)@(predicted-y)
+        error=(1/(2*r))*np.transpose(predicted-y)@(predicted-y)
         z.append(error[0][0])#error is a matrix     
     predicted=X@theta
-    xdata=np.arange(0,4,0.01)
-    plt.plot(xdata,predicted)
+    plt.plot(x,z)
+    plt.show()
     print(theta)    
 xdata=np.arange(0,4,0.01)
 ydata=3.86718*xdata*xdata+1.5+0.2*np.random.randn(len(xdata))
@@ -26,9 +26,9 @@ for i in range(400):
 for i in range(400):
     X[i][2]=xdata[i]*xdata[i]; 
 theta=np.ones((3,1))
-theta[0]=1;
-theta[1]=1;
-theta[2]=1;
+theta[0]=1
+theta[1]=1
+theta[2]=1
 y=np.ones((len(ydata),1))
 for i in range(len(ydata)):
     y[i][0]=ydata[i]
